@@ -248,3 +248,15 @@ mysql> describe employee_payroll;
 +--------------+--------------+------+-----+---------+----------------+
 12 rows in set (0.10 sec)
 
+mysql> update employee_payroll set departmetnt = 'SALES' where name = 'Teresa';
+Query OK, 1 row affected (0.11 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> insert into employee_payroll
+    -> (name, departmetnt, gender, basic_pay, deductions, taxable_pay, tax, net_
+pay,start) values
+    -> ('Teresa', 'Marketing', 'F', 300000.00, 100000.00, 200000.00, 500000.00,
+1500000.00, '2019-01-03');
+Query OK, 1 row affected (0.08 sec)
+
+
